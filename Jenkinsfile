@@ -1,5 +1,12 @@
 pipeline {
     agent any
+    tools {
+        git 'DefaultGit'
+    }
+
+    environment {
+        action = "apply"
+    }
 
     stages {
         stage('Cloning github repo') {
